@@ -12,7 +12,7 @@
         android:layout_height="197dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:text="True"
+        android:text="@string/quiz_true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -21,10 +21,10 @@
         app:layout_constraintVertical_bias="0.767" />
 
     <TextView
-        android:id="@+id/button_main_question"
+        android:id="@+id/textView_main_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Question"
+        android:text="@string/quiz_question"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -38,11 +38,19 @@
         android:layout_height="197dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:text="False"
+        android:text="@string/quiz_false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.767" />
+
+    <TextView
+        android:id="@+id/textView_main_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quiz_score"
+        tools:layout_editor_absoluteX="172dp"
+        tools:layout_editor_absoluteY="177dp" />
 </android.support.constraint.ConstraintLayout>

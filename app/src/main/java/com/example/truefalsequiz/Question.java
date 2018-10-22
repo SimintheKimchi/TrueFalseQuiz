@@ -1,8 +1,13 @@
 package com.example.truefalsequiz;
 
-public class Question {
+public class Question extends TrueFalseActivity{
     private String question;
     private boolean answer;
+
+    public Question(String question, boolean answer) {
+        this.question = question;
+        this.answer = answer;
+    }
 
     public String getQuestion() {
         return question;
@@ -18,6 +23,10 @@ public class Question {
 
     public void setAnswer(boolean answer) {
         this.answer = answer;
+    }
+
+    public void checkAnswer(boolean userAnswer){
+        if(truebutton.equals(true))
     }
 
     @Override

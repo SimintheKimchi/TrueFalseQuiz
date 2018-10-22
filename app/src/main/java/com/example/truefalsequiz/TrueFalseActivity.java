@@ -43,9 +43,7 @@ public class TrueFalseActivity extends AppCompatActivity {
         // convert your array to a list using the Arrays utility class
         questionList = Arrays.asList(questions);
         // verify that it read everything properly
-        Log.d("WORKING", "onCreate: " + questionList.toString());
-
-        question.setText(questionList.get(0).toString());
+        //Log.d("WORKING", "onCreate: " + questionList.toString());
     }
 
     private void wireWidgets() {
@@ -55,29 +53,8 @@ public class TrueFalseActivity extends AppCompatActivity {
     }
 
     private void setListeners() {
-        truebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                checkTrueAnswer();
-            }
-        });
-        falsebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                checkFalseAnswer();
-            }
-        });
-    }
-
-    private void checkFalseAnswer() {
-    }
-
-    private void checkTrueAnswer() {
-
-    }
-
-    private void showScoreScreen() {
-        //add screen and score here
+        truebutton.setOnClickListener((View.OnClickListener) this);
+        falsebutton.setOnClickListener((View.OnClickListener) this);
     }
 
     public String readTextFile(InputStream inputStream) {
