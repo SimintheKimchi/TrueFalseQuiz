@@ -2,38 +2,60 @@ package com.example.truefalsequiz;
 
 import java.util.List;
 
-public class Quiz extends TrueFalseActivity{
-    int score;
-    int currentQuestion;
+public class Quiz {
+    private int score;
+    private int currentQ;
 
-    public int getScore() {
+    private List<Question> questions;
+
+    public Quiz(List<Question> questionList){
+        score = 0;
+        currentQ= 0;
+        questions = questionList;
+    }
+
+    public Question getQuestion(){
+        return questions.get(currentQ);
+    }
+
+    public int getQuizLength(){
+        return questions.size();
+    }
+
+    public void setQuestions(List<Question> questionList){
+        questions = questionList;
+    }
+
+    public int getScore(){
         return score;
     }
 
-    public void setScore(int score) {
+    public void increaseScore(){
+        score++;
+    }
+
+    public void setScore(int score){
         this.score = score;
     }
 
-    public int getCurrentQuestion() {
-        return currentQuestion;
+    public int getCurrentQ() {
+        return currentQ;
     }
 
-    public void setCurrentQuestion(int currentQuestion) {
-        this.currentQuestion = currentQuestion;
+    public void setCurrentQ(int currentQ) {
+        this.currentQ = currentQ;
     }
 
-    public void nextQuestion() {
+    public void nextQuestion(){
+        currentQ+=1;
     }
 
-    public boolean isThereAnotherQuestion() {
-
-    }
-
-    @Override
-    public String toString() {
-        return "Quiz{" +
-                "score=" + score +
-                ", currentQuestion=" + currentQuestion +
-                '}';
+    public boolean isThereAnotherQ(){
+        if(getCurrentQ()==10){
+            return false;
+        }
+        else{
+            return true;
+        }
     }
 }
